@@ -267,8 +267,9 @@ app.layout = dbc.Container([
         children=[dbc.Row(
                     dbc.Col([html.H1(id="title2",children="RecSys by IBCF",
                                     className='text-center text-primary mb-4'),
-                            html.H3(children="Refresh to get a new set of movies to rate",
-                                    className='text-center text-primary mb-4')]
+#                             html.H3(children="Refresh to get a new set of movies to rate",
+#                                     className='text-center text-primary mb-4')]
+                            ]
                             )
                 ),
                 dbc.Row([dbc.Col(id="movies_to_rate",children=[display_movie_to_rate(movie_id1,movie_id2,i,j) for movie_id1,movie_id2,i,j in random_movies])]),
