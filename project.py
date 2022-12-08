@@ -360,7 +360,7 @@ def submit_button(n_clicks,r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11):
 
     test_df = pd.DataFrame({"userID":["new"]*n_r,"itemID":ms,"rating":rs})
 
-    random_users = np.random.choice(train_df['userID'].unique(),500,replace=False)
+    random_users = np.random.choice(train_df['userID'].unique(),400,replace=False)
     train_df_sampled = train_df[train_df['userID'].isin(random_users)].copy()
 
     data_train = Dataset.load_from_df(pd.concat([train_df_sampled,test_df]), reader).build_full_trainset()
