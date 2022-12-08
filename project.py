@@ -184,16 +184,23 @@ movies_id = list(ratings['MovieID'].unique())
 reader = Reader(rating_scale=(1, 5))
 train_df = ratings.rename(columns={"UserID":"userID","MovieID":"itemID","Rating":"rating"}).drop(columns=['Timestamp'])
 
+random_users = np.random.choice(train_df['userID'].unique(),500,replace=False)
+train_df_sampled = train_df[train_df['userID'].isin(random_users)].copy()
+
+train_df = None
+
 
 movies = pd.read_table("https://liangfgithub.github.io/MovieData/movies.dat",sep="::",header=None,engine='python',encoding='latin-1')
 #movies0 = movies.copy()
 movies.columns = ['MovieID','Title','Genres']
+
 #movies0 = movies.copy()
 movies['year'] = movies['Title'].apply(lambda x:int(x[-5:-1]))
 movies['MovieID'] = movies['MovieID'].apply(lambda x:'m'+str(x))
 movies0 = movies.copy()
 movies['Genres'] = movies['Genres'].apply(lambda x:x.split("|"))
 movies_w_ratings = movies.explode('Genres').merge(ratings,on='MovieID',how='left')
+movies = None
 
 try:
     with open("sys1_result.pickle",'rb') as f:
@@ -360,8 +367,7 @@ def submit_button(n_clicks,r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11):
 
     test_df = pd.DataFrame({"userID":["new"]*n_r,"itemID":ms,"rating":rs})
 
-    random_users = np.random.choice(train_df['userID'].unique(),400,replace=False)
-    train_df_sampled = train_df[train_df['userID'].isin(random_users)].copy()
+    
 
     data_train = Dataset.load_from_df(pd.concat([train_df_sampled,test_df]), reader).build_full_trainset()
     algo = KNNWithMeans(sims_options={"user_based":False,"name":"cosine"})
