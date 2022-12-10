@@ -4,7 +4,8 @@
 
 ### Online webapp
 
-https://psl-proj-2pages.onrender.com/
+https://psl-proj-2pages.onrender.com/ (free,slow)
+https://psl-proj-2pages-paid-starter.onrender.com/ (paid, faster: if not online when grading, ping me on Campuswire)
 
 ### Testing on your own computer
 
