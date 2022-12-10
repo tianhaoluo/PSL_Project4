@@ -2,6 +2,11 @@
 
 ## Introduction
 
+### Online webapp
+
+https://psl-proj-2pages.onrender.com/ (free,slow)
+https://psl-proj-2pages-paid-starter.onrender.com/ (paid, faster: if not online when grading, ping me on Campuswire)
+
 ### Genre-based recommendation
 
 <ul>
@@ -17,10 +22,7 @@
   <li> Note that, a movie can be recommended as long as it's not rated by the user. (it can appear in the section where the program asks the user to rate)</li>
 </ul>
 
-### Online webapp
-
-https://psl-proj-2pages.onrender.com/ (free,slow)
-https://psl-proj-2pages-paid-starter.onrender.com/ (paid, faster: if not online when grading, ping me on Campuswire)
+## Usage
 
 ### Testing on your own computer
 
