@@ -119,7 +119,15 @@ def recsys1(_,genre,method):
     Output(component_id="card05_2i",component_property='src'),
     Output(component_id="card06_2i",component_property='src'),
     Output(component_id="card07_2i",component_property='src'),
-    Output(component_id="card08_2i",component_property='src')
+    Output(component_id="card08_2i",component_property='src'),
+    Output(component_id="rating1",component_property='value'),
+    Output(component_id="rating2",component_property='value'),
+    Output(component_id="rating3",component_property='value'),
+    Output(component_id="rating4",component_property='value'),
+    Output(component_id="rating5",component_property='value'),
+    Output(component_id="rating6",component_property='value'),
+    Output(component_id="rating7",component_property='value'),
+    Output(component_id="rating8",component_property='value'),
     ],
     [
     Input(component_id="Reset",component_property="n_clicks")
@@ -129,7 +137,7 @@ def recsys1(_,genre,method):
 def reset(_):
     new_sample = np.random.choice(movies_w_ratings,8,replace=False)
     ns = [x[1:] for x in new_sample]
-    return toURL(ns[0]),toURL(ns[1]),toURL(ns[2]),toURL(ns[3]),toURL(ns[4]),toURL(ns[5]),toURL(ns[6]),toURL(ns[7])
+    return toURL(ns[0]),toURL(ns[1]),toURL(ns[2]),toURL(ns[3]),toURL(ns[4]),toURL(ns[5]),toURL(ns[6]),toURL(ns[7]),None,None,None,None,None,None,None,None
 
 
 @app.callback(
