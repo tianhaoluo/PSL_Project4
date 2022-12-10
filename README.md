@@ -7,9 +7,10 @@
 <ul>
   <li> 'Rating' method: return top 8 movies based on average rating (for movies with more than 100 ratings only) </li>
   <li> 'Popularity' method: The top 8 movies based on recency (for larger categories like Comedy, can afford to look at most recent 2 years, i.e. 1999,2000 since it's an old dataset; for smaller categories, the lookback window will include more years).</li> 
-<\ul>
+</ul>
 
 ### IBCF-based recommendation
+  
 <ul>
   <li> When you don't rate anything, it will return top-8 results based on movie's ID (as integer) </li>
   <li> Otherwise, Surprise will try to return top-8 results based on predicted rating</li>
