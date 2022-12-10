@@ -1,6 +1,20 @@
 # PSL_Project4
 
-## Usage
+## Introduction
+
+### Genre-based recommendation
+
+<ul>
+  <li> 'Rating' method: return top 8 movies based on average rating (for movies with more than 100 ratings only) </li>
+  <li> 'Popularity' method: The top 8 movies based on recency (for larger categories like Comedy, can afford to look at most recent 2 years, i.e. 1999,2000 since it's an old dataset; for smaller categories, the lookback window will include more years).</li> 
+<\ul>
+
+### IBCF-based recommendation
+<ul>
+  <li> When you don't rate anything, it will return top-8 results based on movie's ID (as integer) </li>
+  <li> Otherwise, Surprise will try to return top-8 results based on predicted rating</li>
+  <li> Note that, a movie can be recommended as long as it's not rated by the user. (it can appear in the section where the program asks the user to rate)</li>
+</ul>
 
 ### Online webapp
 
@@ -46,7 +60,12 @@ Install packages on the virtual environment
 pip install -r requirements.txt
 ```
 
-Run the program, it should show you something like Dash is running on http://127.0.0.1:8050/
+The logic of generating some partial results can be found at prepare_loaded_data.py. It can be run like this
+```
+python prepare_loaded_data.py
+```
+
+Start the webapp, it should show you something like Dash is running on http://127.0.0.1:8050/
 ```
 python app.py
 ```
