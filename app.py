@@ -189,7 +189,7 @@ def recsys2(_,url1,url2,url3,url4,url5,url6,url7,url8,r1,r2,r3,r4,r5,r6,r7,r8):
             user_rating[mid] = int(r)
     if len(user_rating) < 3:
         print("Rate at least 3 movies")
-        return "These are some amazing movies that are popular!",toURL("8"),toURL("9"),toURL("10"),toURL("11"),toURL("12"),toURL("13"),toURL("14"),toURL("15")
+        return "These are some amazing movies that are popular!",toURL("9"),toURL("10"),toURL("11"),toURL("12"),toURL("13"),toURL("14"),toURL("15"),toURL("16")
     ms = []
     rs = []
     for m,r in user_rating.items():
