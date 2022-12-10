@@ -17,7 +17,7 @@ def toURL(mid):
 layout = html.Div(
     [
         dbc.Row([
-                html.H2('Rate as many movies as possible',style={'text-align':'center'}),
+                html.H2('Rate as many movies as possible (at least 3)',style={'text-align':'center'}),
                 dbc.Col(
                     [
                         dbc.Card(
@@ -188,7 +188,7 @@ layout = html.Div(
         dbc.Button("Submit",id='Submit1',size='lg'),
         dbc.Button("Reset Movies to rate",id='Reset',size='lg',style={"margin-left": "15px"}),
         dbc.Row([
-                html.H2('Your recommendations',style={'text-align':'center'}),
+                html.H2('Your recommendations (wait for 10s: free tier of server)',style={'text-align':'center'}),
                 html.H2('',id="warn",style={'text-align':'center'}),
                 dbc.Col(
                     [
