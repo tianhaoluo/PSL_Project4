@@ -17,7 +17,7 @@ def toURL(mid):
 layout = html.Div(
     [
         dbc.Row([
-                html.H2('Rate as many movies as possible (at least 3)',style={'text-align':'center'}),
+                html.H2('Rate as many movies as possible (at least 3 for personalized results)',style={'text-align':'center'}),
                 dbc.Col(
                     [
                         dbc.Card(
