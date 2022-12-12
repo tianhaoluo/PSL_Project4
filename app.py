@@ -7,12 +7,12 @@ from surprise import Dataset, NormalPredictor, Reader,KNNWithMeans
 from surprise.model_selection import cross_validate
 import pandas as pd
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],
+dash_app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],
                 meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, initial-scale=1.0'}]
                 ,use_pages = True)
 
-server = app.server
+app = dash_app.server
 
 with open("sys1_result.pickle",'rb') as f:
     sys1_result = pickle.load(f)
@@ -59,7 +59,7 @@ recsys_names = {"Pg1":"Genre-based","Pg2":"IBCF-based"}
 
 print([page['name'] for page in dash.page_registry.values()])
 
-app.layout = dbc.Container(
+dash_app.layout = dbc.Container(
     [
         # main app framework
         html.Div("Recommender System App with Dash", style={'fontSize':50, 'textAlign':'center'}),
@@ -80,7 +80,7 @@ def toURL(mid):
 def toMid(url):
     return "m"+url.split("/")[-1].split(".")[0]
 
-@app.callback(
+@dash_app.callback(
     [
     Output(component_id="card01_1",component_property='src'),
     Output(component_id="card02_1",component_property='src'),
@@ -110,7 +110,7 @@ def recsys1(_,genre,method):
 
 
 
-@app.callback(
+@dash_app.callback(
     [
     Output(component_id="card01_2i",component_property='src'),
     Output(component_id="card02_2i",component_property='src'),
@@ -140,7 +140,7 @@ def reset(_):
     return toURL(ns[0]),toURL(ns[1]),toURL(ns[2]),toURL(ns[3]),toURL(ns[4]),toURL(ns[5]),toURL(ns[6]),toURL(ns[7]),None,None,None,None,None,None,None,None
 
 
-@app.callback(
+@dash_app.callback(
     [
     Output(component_id="warn",component_property='children'),
     Output(component_id="card01_2o",component_property='src'),
@@ -216,4 +216,4 @@ def recsys2(_,url1,url2,url3,url4,url5,url6,url7,url8,r1,r2,r3,r4,r5,r6,r7,r8):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    dash_app.run(debug=True)
