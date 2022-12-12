@@ -16,7 +16,7 @@ https://dash-app-psl.azurewebsites.net/
 ### IBCF-based recommendation
   
 <ul>
-  <li> When you don't rate anything, it will return top-8 results based on movie's ID (as integer) </li>
+  <li> When you don't rate anything, it will return movies with id 1-8 (they're all movies users might like, that's why I ask users to rate). </li>
   <li> Otherwise, Surprise will try to return top-8 results based on predicted rating</li>
   <li> Note that, a movie can be recommended as long as it's not rated by the user. (it can appear in the section where the program asks the user to rate)</li>
 </ul>
