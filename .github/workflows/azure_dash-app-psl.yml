@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'dash-app-psl'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DBFDC9063E9E4AE4B4F18562ED799172 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5E201095649B4C1B96D7DFC801E1C61E }}
