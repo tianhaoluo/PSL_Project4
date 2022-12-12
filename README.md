@@ -4,8 +4,7 @@
 
 ### Online webapp
 
-https://psl-proj-2pages.onrender.com/ (free,slow)
-https://psl-proj-2pages-paid-starter.onrender.com/ (paid, faster: if not online when grading, ping me on Campuswire)
+https://dash-app-psl.azurewebsites.net/
 
 ### Genre-based recommendation
 
