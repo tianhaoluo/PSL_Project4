@@ -4,7 +4,7 @@
 
 ### Online webapp
 
-https://dash-app-psl.azurewebsites.net/
+https://dash-app-psl.azurewebsites.net/ (closed after course to save cost)
 
 ### Genre-based recommendation
 
